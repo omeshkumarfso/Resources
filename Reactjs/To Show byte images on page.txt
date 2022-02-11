@@ -1,0 +1,28 @@
+1.   https://colinrlly.medium.com/send-store-and-show-images-with-react-express-and-mongodb-592bc38a9ed
+
+-------------This is a function to convert byte into image ---------------------
+arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = [].slice.call(new Uint8Array(buffer));
+    bytes.forEach((b) => binary += String.fromCharCode(b));
+    return window.btoa(binary);
+};
+
+---------This will be use as it is-----------------
+var base64Flag = 'data:image/jpeg;base64,';
+
+
+---------- Api calling and get Image Byte data ------------------
+fetch('http://yourserver.com/api/img_data')
+    .then((res) => res.json())
+    .then((data) => {
+        // console.log(img)
+        
+        var imageStr = this.arrayBufferToBase64(data.img.data.data);
+        this.setState({
+            img: base64Flag + imageStr
+        )}
+    })
+
+    ----------- html to show image -----------
+    <a src={img} ></a>
