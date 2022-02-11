@@ -1,0 +1,1 @@
+1.  All type of chart Bar chart, Pie chart, Financial chart chart in react js: https://canvasjs.com/react-charts/column-chart/
