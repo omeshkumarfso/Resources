@@ -1,0 +1,1 @@
+1. To find color rgb, hsv normal hex code all: "https://imageresizer.com/color-picker"
