@@ -1,0 +1,7 @@
+1. sqlcmd -S 192.168.98.230,1433 -U username:- Enter
+2. comman to list down all databases name:
+     select name from sys.databases
+3. select database by:
+    SELECT DB_NAME() AS DataBaseName
+4. show all table name of database "Mydatabase":
+     select * from Mydatabase.INFORMATION_SCHEMA.TABLES
