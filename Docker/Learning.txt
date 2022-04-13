@@ -1,0 +1,6 @@
+1. To know docker version =>  docker version
+2. To download docker image => docker pull nameOfImage
+      ex: to download node, type => docker pull node
+3. To know running docker process or container => docker ps
+4. To know all running process => docker ps -a
+5. To interact with any image => docker run -it ubuntu

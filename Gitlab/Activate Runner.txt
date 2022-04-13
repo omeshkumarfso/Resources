@@ -1,0 +1,13 @@
+To activate specific runnner :
+
+1. Download Active runner for window:
+2. Make folder by name Gitlab-runner and past Active runner binary file in this folder.
+3. open cmd as Admin and type: binaryfileName register
+  Ex. binary file name Gitlab-runner then type => Gitlab-runner.exe register 
+4. type url => https://gitlab.com
+5. get token from gitlab.com => repository => setting => CI/cD => Runners => active specified token
+and enter for last.
+6. To install gitlab-runner => Gitlab-runner.exe install
+7. To start => Gitlab-runner.exe start
+8. To stop runner => Gitlab-runner.exe stop
+9. To uninstall runner => Gitlab-runner.exe uninstall

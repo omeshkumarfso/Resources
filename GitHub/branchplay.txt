@@ -1,0 +1,13 @@
+
+1. To delete branch locally: 
+git branch -d brachName
+   ex: git branch -d master
+2. To delete branch remote:
+git push origin --delete master
+
+
+
+3. To merge brach name1 to name2:         |
+ step 1. git checkout name2               |
+ step 2. git merge name1                  |
+ step 3. git push -u origin name1         |      // To update on remote

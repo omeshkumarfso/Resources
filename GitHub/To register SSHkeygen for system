@@ -1,0 +1,4 @@
+type on git bas cmd:
+1. type => ssh-keygen
+2. goto => /c/Users/ravee/.ssh
+3. copy sshkey from file and pase on gitlab.com => Account preference(by click on right top profile) => ssh key
