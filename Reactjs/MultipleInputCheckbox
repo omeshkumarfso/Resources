@@ -1,0 +1,60 @@
+import { useState } from "react"
+function App() {
+  const profiles = [
+    {id:1, name: 'Name', checked:true },
+    {id:2, name: 'Phone', checked:false },
+    {id:3, name: 'Address', checked:true },
+    {id:4, name: 'Qualification', checked:true },
+    {id:5, name: 'Description', checked:true },
+  ]
+
+  const [userProfiles, setUserProfiles] = useState(profiles)
+  const [loading, setLoading] = useState(false)
+
+  console.log("start")
+
+  const inputChangeHandle = (e) => {
+    setLoading(true)
+
+    console.log("user profile", userProfiles)
+    let tempUserProfiles = [...userProfiles]
+  for(var i=0 ; i<userProfiles.length;i++){
+    console.log("first",userProfiles[i])
+    if(tempUserProfiles[i].name === e.target.name ){
+      let tempUserProfile = {...tempUserProfiles[i]}
+      console.log("tempUserProfile", tempUserProfile)
+      tempUserProfile.checked = e.target.checked
+      console.log("tempUserProfile.checked", tempUserProfile.checked)
+      tempUserProfiles[i] = tempUserProfile
+      console.log("tempUserProfiles[i]", tempUserProfiles[i])
+      setUserProfiles(tempUserProfiles)
+    }
+  }
+  console.log("second",userProfiles)
+  setLoading(false)
+}
+
+if(loading){
+  return <h2>loading</h2>
+}
+else{
+
+  return (
+    <div>
+
+    <h2>Multiple check box Handle with map rendering</h2>
+   
+    {
+      userProfiles.map((pro) => (
+        <input type='checkbox' key={pro.id} id={pro.id} name={pro.name} checked={pro.checked} onChange={inputChangeHandle}  />
+        )
+      )
+    }
+
+    </div>
+    
+  )
+}
+}
+
+export default App;
